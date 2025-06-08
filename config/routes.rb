@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "home/top"
   devise_for :customers, controllers: {
     sessions: "customers/sessions",
     registrations: "customers/registrations"
@@ -18,5 +19,5 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  root "books#index"
+  root "home#top"
 end
